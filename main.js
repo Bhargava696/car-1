@@ -67,11 +67,87 @@ function oil(e) {
         console.log("back");
     }
     if (anything == "76") {
-        leftSide();
+        leftside();
         console.log("left");
     }
     if (anything == "82") {
-        rightSide();
+        rightside();
         console.log("right");
+    }
+    if(r_x > 700){
+        console.log("Car 1 won");
+        document.getElementById("status").innerHTML = "Red car won";
+    }else if(g_x > 700){
+        document.getElementById("status").innerHTML = "Green car won";
+    }
+}
+function left() {
+    if (r_x >= 0) {
+        r_x = r_x - 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+
+function right() {
+    if (r_x <= 725) {
+        r_x = r_x + 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+
+function up() {
+    if (r_y >= 0){
+        r_y = r_y - 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+
+function down() {
+    if (r_y <= 550){
+        r_y = r_y + 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+function leftside() {
+    if (g_x >= 0) {
+        g_x = g_x - 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+
+function rightside() {
+    if (g_x <= 725) {
+        g_x = g_x + 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+
+function front() {
+    if (g_y >= 0){
+        g_y = g_y - 10;
+        uploadbg();
+        uploadr();
+        uploadg();
+    }
+}
+
+function back() {
+    if (g_y <= 550){
+        g_y = g_y + 10;
+        uploadbg();
+        uploadr();
+        uploadg();
     }
 }
